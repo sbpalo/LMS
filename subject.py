@@ -42,7 +42,8 @@ while (user_input != 4):
     elif user_input == "3":
         remove_subject()
     elif user_input == "4":
-        print("4")
+        import main
+        main.main_menu()
     else:
         print ("Invalid options, try again!")
 

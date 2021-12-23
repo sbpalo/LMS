@@ -41,7 +41,7 @@ while (user_input != 4):
         import subject
         subject.subject_menu
     elif user_input == "4":
-        print("4")
+        exit()
     else:
         print ("Invalid options, try again!")
     user_input = input(main_menu)
