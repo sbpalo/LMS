@@ -41,7 +41,7 @@ while (user_input != 4):
         remove_student()
     elif user_input == "4":
         import main
-        main.main_menu()
+        main()
     else:
         print ("Invalid options, try again!")
 

@@ -14,12 +14,12 @@ subject_menu = """
 Select your choice: """
 
 def prompt_add_subject():
-    subject_code = input("Enter first name: ")
-    subject_name = input("Enter middle name: ")
+    subject_code = input("Enter subject code: ")
+    subject_name = input("Enter subject name: ")
     add_subject(subject_code, subject_name)
 
 def view_subjects(subjects):
-    print("All students")
+    print("All subjects")
     for subject in subjects:
         print(f"--------------------")
         print(f"Subject code: {subject[0]}\nSubject Name: {subject[1]}")
@@ -43,7 +43,7 @@ while (user_input != 4):
         remove_subject()
     elif user_input == "4":
         import main
-        main.main_menu()
+        main()
     else:
         print ("Invalid options, try again!")
 

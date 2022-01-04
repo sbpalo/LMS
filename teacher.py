@@ -1,8 +1,8 @@
 #create a menu for student
 
 from database import create_table_teacher, add_teacher, get_teachers, close_database, delete_entry
-from subject import view_subjects
-create_table_teacher
+
+create_table_teacher()
 
 teacher_menu = """
 1. Add a teacher
@@ -41,7 +41,7 @@ while (user_input != 4):
         remove_teacher()
     elif user_input == "4":
         import main
-        main.main_menu()
+        main()
     else:
         print ("Invalid options, try again!")
 
