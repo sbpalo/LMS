@@ -14,7 +14,7 @@
 def main_main(): 
     main_menu = """
     1. Student
-    2. Teacher
+    2. Teacher     
     3. Subjects
     4. Exit
 

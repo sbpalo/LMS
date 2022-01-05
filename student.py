@@ -15,13 +15,14 @@ def prompt_add_student():
     first_name = input("Enter first name: ")
     middle_name = input("Enter middle name: ")
     last_name = input("Enter last name: ")
-    add_student(first_name, middle_name, last_name)
+    student_id = input("Enter you student number:" )
+    add_student(student_id, first_name, middle_name, last_name)
 
 def view_students(students):
     print("All students")
     for student in students:
         print(f"--------------------")
-        print(f"Name of student: {student[0]} {student[2]}")
+        print(f"Name of student: {student[1]} {student[3]} ")
 
 def remove_student():
     student = input("Last name of student you want to delete: ")

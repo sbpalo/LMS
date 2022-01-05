@@ -3,26 +3,34 @@ from sqlite3.dbapi2 import connect
 connection = sqlite3.connect("data.db")
 
 def create_table_student():
-    connection.execute(
-        "CREATE TABLE IF NOT EXISTS student (first_name TEXT, middle_name TEXT, last_name TEXT)")
+    connection.execute("""CREATE TABLE IF NOT EXISTS student (
+        student_id INT, 
+        first_name TEXT, 
+        middle_name TEXT, 
+        last_name TEXT
+    )""")
     connection.commit()
 
 def create_table_subject():
-    connection.execute(
-        "CREATE TABLE IF NOT EXISTS subject (subject_code TEXT, subject_name TEXT)")
+    connection.execute("""CREATE TABLE IF NOT EXISTS subject (
+        subject_code TEXT, 
+        subject_name TEXT
+        )""")
     connection.commit()
 
 def create_table_teacher():
-    connection.execute(
-        "CREATE TABLE IF NOT EXISTS teacher (given_name TEXT, name_last TEXT)")
+    connection.execute("""CREATE TABLE IF NOT EXISTS teacher (
+        given_name TEXT, 
+        name_last TEXT)
+        """)
     connection.commit()
 
 def close_database():
     connection.close()
 
-def add_student(first_name, middle_name, last_name):
+def add_student(student_id, first_name, middle_name, last_name):
     connection.execute(
-        f"INSERT INTO student VALUES('{first_name}','{middle_name}', '{last_name}');")
+        f"INSERT INTO student VALUES('{student_id}','{first_name}','{middle_name}', '{last_name}');")
     connection.commit()
 
 def add_subject(subject_code, subject_name):

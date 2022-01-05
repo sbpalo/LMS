@@ -36,7 +36,6 @@ user_input = input(subject_menu)
 while (user_input != 4):
     if user_input == "1":
         prompt_add_subject()
-        print("f{subject_code}{subject_name}")
     elif user_input == "2":
         view_subjects(get_subjects())
     elif user_input == "3":
