@@ -8,7 +8,7 @@ def create_table_student():
         first_name TEXT, 
         middle_name TEXT, 
         last_name TEXT
-    )""")
+        )""")
     connection.commit()
 
 def create_table_subject():
@@ -21,8 +21,8 @@ def create_table_subject():
 def create_table_teacher():
     connection.execute("""CREATE TABLE IF NOT EXISTS teacher (
         given_name TEXT, 
-        name_last TEXT)
-        """)
+        name_last TEXT
+        )""")
     connection.commit()
 
 def close_database():
