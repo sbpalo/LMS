@@ -20,7 +20,6 @@ def prompt_add_teacher():
 def view_teachers(teachers):
     print("All teachers")
     for teacher in teachers:
-        print(f"--------------------")
         print(f"Name of teachers: {teacher[0]} {teacher[1]}")
 
 def remove_teacher():

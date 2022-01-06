@@ -4,7 +4,7 @@ connection = sqlite3.connect("data.db")
 
 def create_table_student():
     connection.execute("""CREATE TABLE IF NOT EXISTS student (
-        student_id INT, 
+        student_id INT PRIMARY KEY, 
         first_name TEXT, 
         middle_name TEXT, 
         last_name TEXT
@@ -55,3 +55,16 @@ def get_teachers():
 def delete_entry(student,subject,teacher):
     connection.execute('DELETE FROM entries where last_name = ? OR subject = ? OR teacher = ?' , (student, subject, teacher))
     connection.commit()
+
+def list_student():
+    return connection.execute("""
+    CREATE TABLE listofstudent AS
+    SELECT student.first_name, 
+    student.last_name AS "Name of Student", 
+    student.student_id AS "Student Number"
+    FROM student
+    """)
+    connection.commit()
+
+def enrolled_student():
+    return connection.execute("SELECT first_name, last_name FROM student ;")

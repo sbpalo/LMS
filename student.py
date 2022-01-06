@@ -21,7 +21,6 @@ def prompt_add_student():
 def view_students(students):
     print("All students")
     for student in students:
-        print(f"--------------------")
         print(f"Name of student: {student[1]} {student[3]} ")
 
 def remove_student():

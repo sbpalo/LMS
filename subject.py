@@ -1,7 +1,7 @@
 #create a menu for student
 
 
-from database import create_table_subject, add_subject, get_subjects, delete_entry, close_database
+from database import create_table_subject, add_subject, get_students, get_subjects, delete_entry, close_database
 
 create_table_subject()
 
@@ -9,7 +9,8 @@ subject_menu = """
 1. Add a subject
 2. List of all subjects
 3. Delete a subject
-4. Go back to the main menu
+4. Enroll a student
+5. Go back to the main menu
 
 Select your choice: """
 
@@ -23,6 +24,10 @@ def view_subjects(subjects):
     for subject in subjects:
         print(f"--------------------")
         print(f"Subject code: {subject[0]}\nSubject Name: {subject[1]}")
+
+def enroll_student():
+    subject_to_enroll = input("Which subject you want to enroll? ")
+    student_to_enrol = input("Which student to enroll?")
 
 def remove_subject():
     subject = input("Name of subject you want to delete: ")
@@ -41,6 +46,8 @@ while (user_input != 4):
     elif user_input == "3":
         remove_subject()
     elif user_input == "4":
+        enroll_student()
+    elif user_input == "5":
         import main
         main()
     else:

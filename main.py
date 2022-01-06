@@ -14,9 +14,10 @@
 def main_main(): 
     main_menu = """
     1. Student
-    2. Teacher     
+    2. Teacher
     3. Subjects
-    4. Exit
+    4. Display a class
+    5. Exit
 
     Select your choice: """
     
@@ -39,6 +40,9 @@ def main_main():
             import subject
             subject.subject_menu
         elif user_input == "4":
+            import classroom
+            classroom.class_menu
+        elif user_input == "5":
             exit()
         else:
             print ("Invalid options, try again!")
